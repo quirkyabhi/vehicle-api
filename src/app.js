@@ -41,9 +41,9 @@ app.use(function (req, res,next){
     console.log("middleware before  api call");
     next();
 });
-app.get('/users',(req, res)=>{
-    res.json(users)
-})
+// app.get('/users',(req, res)=>{
+//     res.json(users)
+// })
 app.get('/',(req, res)=>{
     res.json(
         { msg:'API running ' }

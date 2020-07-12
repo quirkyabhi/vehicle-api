@@ -32,7 +32,7 @@ export default{
             employee =>{
                 if(!employee){
                     return res.status(400).json(
-                        { err:"employee not found" }
+                        { err:"customer..... not found" }
                     )
                 }
                 else{
