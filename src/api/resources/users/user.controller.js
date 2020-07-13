@@ -26,13 +26,13 @@ export default{
             err => res.status(500).json(err)
         )
     },
-    findOne(req,res){
+    detete(req,res){
         const id = req.params.id
         User.findByIdAndRemove(id).then(
             employee =>{
                 if(!employee){
                     return res.status(400).json(
-                        { err:"customer..... not found" }
+                        { err:"customer not found" }
                     )
                 }
                 else{
