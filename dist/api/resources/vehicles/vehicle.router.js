@@ -1,0 +1,20 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.vehicleRouter = void 0;
+
+var _vehicle = _interopRequireDefault(require("./vehicle.controller"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var express = require('express');
+
+var vehicleRouter = express.Router(); // userRouter.post('/signup',vehicleController.signup)
+// userRouter.post('/login',vehicleController.login)
+
+exports.vehicleRouter = vehicleRouter;
+vehicleRouter.route('/').post(_vehicle["default"].create).get(_vehicle["default"].findAll);
+vehicleRouter.route('/:id').get(_vehicle["default"].findOne)["delete"](_vehicle["default"]["delete"]).put(_vehicle["default"].update);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9hcGkvcmVzb3VyY2VzL3ZlaGljbGVzL3ZlaGljbGUucm91dGVyLmpzIl0sIm5hbWVzIjpbImV4cHJlc3MiLCJyZXF1aXJlIiwidmVoaWNsZVJvdXRlciIsIlJvdXRlciIsInJvdXRlIiwicG9zdCIsInZlaGljbGVDb250cm9sbGVyIiwiY3JlYXRlIiwiZ2V0IiwiZmluZEFsbCIsImZpbmRPbmUiLCJwdXQiLCJ1cGRhdGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFDQTs7OztBQURBLElBQU1BLE9BQU8sR0FBR0MsT0FBTyxDQUFDLFNBQUQsQ0FBdkI7O0FBRU8sSUFBTUMsYUFBYSxHQUFHRixPQUFPLENBQUNHLE1BQVIsRUFBdEIsQyxDQUVQO0FBQ0E7OztBQUVBRCxhQUFhLENBQUNFLEtBQWQsQ0FBb0IsR0FBcEIsRUFDQ0MsSUFERCxDQUNNQyxvQkFBa0JDLE1BRHhCLEVBRUNDLEdBRkQsQ0FFS0Ysb0JBQWtCRyxPQUZ2QjtBQUlBUCxhQUFhLENBQUNFLEtBQWQsQ0FBb0IsTUFBcEIsRUFDQ0ksR0FERCxDQUNLRixvQkFBa0JJLE9BRHZCLFlBRVFKLDZCQUZSLEVBR0NLLEdBSEQsQ0FHS0wsb0JBQWtCTSxNQUh2QiIsInNvdXJjZXNDb250ZW50IjpbImNvbnN0IGV4cHJlc3MgPSByZXF1aXJlKCdleHByZXNzJylcbmltcG9ydCB2ZWhpY2xlQ29udHJvbGxlciBmcm9tICcuL3ZlaGljbGUuY29udHJvbGxlcidcbmV4cG9ydCBjb25zdCB2ZWhpY2xlUm91dGVyID0gZXhwcmVzcy5Sb3V0ZXIoKTtcblxuLy8gdXNlclJvdXRlci5wb3N0KCcvc2lnbnVwJyx2ZWhpY2xlQ29udHJvbGxlci5zaWdudXApXG4vLyB1c2VyUm91dGVyLnBvc3QoJy9sb2dpbicsdmVoaWNsZUNvbnRyb2xsZXIubG9naW4pXG5cbnZlaGljbGVSb3V0ZXIucm91dGUoJy8nKVxuLnBvc3QodmVoaWNsZUNvbnRyb2xsZXIuY3JlYXRlKVxuLmdldCh2ZWhpY2xlQ29udHJvbGxlci5maW5kQWxsKVxuXG52ZWhpY2xlUm91dGVyLnJvdXRlKCcvOmlkJylcbi5nZXQodmVoaWNsZUNvbnRyb2xsZXIuZmluZE9uZSlcbi5kZWxldGUodmVoaWNsZUNvbnRyb2xsZXIuZGVsZXRlKVxuLnB1dCh2ZWhpY2xlQ29udHJvbGxlci51cGRhdGUpIl19

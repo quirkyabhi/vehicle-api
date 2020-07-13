@@ -1,0 +1,27 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.restRouter = void 0;
+
+var _express = _interopRequireDefault(require("express"));
+
+var _user = require("./resources/users/user.router");
+
+var _vehicle = require("./resources/vehicles/vehicle.router");
+
+var _issuedVehicle = require("./resources/issuedVehicles/issuedVehicle.router");
+
+var _payment = require("./resources/payments/payment.router");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var restRouter = _express["default"].Router();
+
+exports.restRouter = restRouter;
+restRouter.use('/users', _user.userRouter);
+restRouter.use('/vehicles', _vehicle.vehicleRouter);
+restRouter.use('/issuedVehicles', _issuedVehicle.issuedVehicleRouter);
+restRouter.use('/payments', _payment.paymentRouter);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9hcGkvaW5kZXguanMiXSwibmFtZXMiOlsicmVzdFJvdXRlciIsImV4cHJlc3MiLCJSb3V0ZXIiLCJ1c2UiLCJ1c2VyUm91dGVyIiwidmVoaWNsZVJvdXRlciIsImlzc3VlZFZlaGljbGVSb3V0ZXIiLCJwYXltZW50Um91dGVyIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7Ozs7QUFDTyxJQUFNQSxVQUFVLEdBQUdDLG9CQUFRQyxNQUFSLEVBQW5COzs7QUFDUEYsVUFBVSxDQUFDRyxHQUFYLENBQWUsUUFBZixFQUF3QkMsZ0JBQXhCO0FBQ0FKLFVBQVUsQ0FBQ0csR0FBWCxDQUFlLFdBQWYsRUFBMkJFLHNCQUEzQjtBQUNBTCxVQUFVLENBQUNHLEdBQVgsQ0FBZSxpQkFBZixFQUFpQ0csa0NBQWpDO0FBQ0FOLFVBQVUsQ0FBQ0csR0FBWCxDQUFlLFdBQWYsRUFBMkJJLHNCQUEzQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBleHByZXNzIGZyb20gJ2V4cHJlc3MnO1xuaW1wb3J0IHt1c2VyUm91dGVyfSBmcm9tICcuL3Jlc291cmNlcy91c2Vycy91c2VyLnJvdXRlcic7XG5pbXBvcnQgeyB2ZWhpY2xlUm91dGVyfSBmcm9tICcuL3Jlc291cmNlcy92ZWhpY2xlcy92ZWhpY2xlLnJvdXRlcidcbmltcG9ydCB7aXNzdWVkVmVoaWNsZVJvdXRlcn0gZnJvbSAnLi9yZXNvdXJjZXMvaXNzdWVkVmVoaWNsZXMvaXNzdWVkVmVoaWNsZS5yb3V0ZXInXG5pbXBvcnQge3BheW1lbnRSb3V0ZXJ9IGZyb20gJy4vcmVzb3VyY2VzL3BheW1lbnRzL3BheW1lbnQucm91dGVyJ1xuZXhwb3J0IGNvbnN0IHJlc3RSb3V0ZXIgPSBleHByZXNzLlJvdXRlcigpO1xucmVzdFJvdXRlci51c2UoJy91c2VycycsdXNlclJvdXRlcik7XG5yZXN0Um91dGVyLnVzZSgnL3ZlaGljbGVzJyx2ZWhpY2xlUm91dGVyKVxucmVzdFJvdXRlci51c2UoJy9pc3N1ZWRWZWhpY2xlcycsaXNzdWVkVmVoaWNsZVJvdXRlcilcbnJlc3RSb3V0ZXIudXNlKCcvcGF5bWVudHMnLHBheW1lbnRSb3V0ZXIpIl19

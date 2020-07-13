@@ -10,7 +10,7 @@ const custSchema= new schema(
         phone: { type: Number, required: true, unique: true},
         gender: { type: String, required: true},
         dlNo: {type: String, required: true, unique: true},
-        password: { type:String, required: true, default:"00000"},
+        password: { type:String, default:"000000"},
         isActive: { type:String, default: "true"},
         dob:{type: Date},
         age:{type: Number},
