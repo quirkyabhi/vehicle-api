@@ -17,11 +17,13 @@ const paymentSchema= new Schema({
     },
     status:{
         type: String,
-        required: true
+        required: true,
+        default:"Paid"
     },
     createdDate: {
         type:Date,
-        required: true
+        required: true,
+        default: Date.now
     }
 },{collection: 'payments'});
 export default new mongoose.model('Payment',paymentSchema);

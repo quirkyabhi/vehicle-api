@@ -8,6 +8,8 @@ export default{
             registrationNo: Joi.string().required(),
             insuranceNo: Joi.string().required(),
             rentPerDay: Joi.number().required(),
+            securityAmount: Joi.number(),
+            fine: Joi.number()
             
         });
         const{ error, value}= Joi.validate(body, schema);

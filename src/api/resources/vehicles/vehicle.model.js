@@ -18,7 +18,7 @@ const vehicleSchema= new schema(
         kmRan: { type:Number },
         model:{type: String},
         color:{type: String},
-        isAvailable:{type: String},
+        isAvailable:{type: String, default:"Available"},
         createdAt:{type : Date, default : Date.now},
         isActive:{ type:String, default: "true"}
 
