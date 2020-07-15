@@ -9,8 +9,20 @@ const issuedvehicleSchema= new Schema({
         required: true 
     },
     userId:{
-        red:'User',
+        ref:'User',
         type:Schema.Types.ObjectId,
+        required: true
+    },
+    userName:{
+        type: String,
+        required: true
+    },
+    userEmail:{
+        type: String,
+        required: true
+    },
+    userPhone:{
+        type:Number,
         required: true
     },
     issueDate:{
