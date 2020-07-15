@@ -7,6 +7,16 @@ export default{
             issueDate: Joi.date().required(),
             returnDate: Joi.date().required(),
             totalRent: Joi.number().required(),
+            vehicleType:Joi.string(),
+            vehicleNo:Joi.string(),
+            vehicleName:Joi.string(),
+            userName: Joi.string(),
+            userEmail:Joi.string(),
+            userPhone:Joi.number(),
+            finePerDay:Joi.number(),
+            totalFine:Joi.number(),
+            securityAmount:Joi.number(),
+            rentPerDay:Joi.number()
             
             
         });

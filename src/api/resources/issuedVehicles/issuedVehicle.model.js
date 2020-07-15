@@ -8,6 +8,17 @@ const issuedvehicleSchema= new Schema({
         type:Schema.Types.ObjectId, 
         required: true 
     },
+    vehicleNo: {  
+        type:String,
+        required: true 
+    },
+    vehicleType: {  
+        type:String,
+    },
+    vehicleName: {  
+        type:String,
+        required: true 
+    },
     userId:{
         ref:'User',
         type:Schema.Types.ObjectId,
@@ -37,14 +48,24 @@ const issuedvehicleSchema= new Schema({
         type: Number,
         required: true
     },
+    finePerDay:{
+        type: Number,
+    },
+    rentPerDay:{
+        type: Number,
+    },
+    totalFine:{
+        type: Number,
+    },
+    securityAmount:{
+        type: Number
+    },
     isActive:{
         type:String,
-        required: true,
         default: "true"
     },
     createdAt: {
         type:Date,
-        required: true,
         default: Date.now
     }
 },{collection: 'issuedVehicles'});
