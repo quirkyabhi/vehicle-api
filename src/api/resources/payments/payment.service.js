@@ -5,7 +5,7 @@ export default{
             issueId: Joi.string().required(),
             fine: Joi.number().required(),
             totalRent: Joi.number().required(),
-            status: Joi.string().required()
+            createdDate:Joi.date().required()
             
         });
         const{ error, value}= Joi.validate(body, schema);

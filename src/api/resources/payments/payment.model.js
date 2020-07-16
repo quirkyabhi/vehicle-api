@@ -17,12 +17,10 @@ const paymentSchema= new Schema({
     },
     status:{
         type: String,
-        required: true,
         default:"Paid"
     },
     createdDate: {
         type:Date,
-        required: true,
         default: Date.now
     }
 },{collection: 'payments'});
