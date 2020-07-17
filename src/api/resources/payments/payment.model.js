@@ -7,6 +7,10 @@ const paymentSchema= new Schema({
         type:Schema.Types.ObjectId, 
         required: true 
     },
+    userId:{
+        ref:'User',
+        type: Schema.Types.ObjectId
+    },
     fine:{
         type: Number,
         required: true
