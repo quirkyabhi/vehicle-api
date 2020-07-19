@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded(
 app.use(cors());
 app.use('/api',restRouter);
 app.use((req, res, next)=>{
-    const error = new Error("Not Founf");
+    const error = new Error("Not Found");
     error.status = 404;
     error.message="Invalid route";
     next(error);

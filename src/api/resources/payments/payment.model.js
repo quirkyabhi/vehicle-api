@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 import IssuedVehicle from '../issuedVehicles/issuedVehicle.model'
 const Schema = mongoose.Schema;
+// mongoose.set('debug', true);
 const paymentSchema= new Schema({
     issueId: { 
         ref:'IssuedVehicle', 
