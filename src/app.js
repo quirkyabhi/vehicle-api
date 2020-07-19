@@ -8,12 +8,8 @@ import bodyParser from "body-parser";
 import cors from 'cors';
 mongoose.Promise= global.Promise;
 mongoose.connect('mongodb://localhost/vehicleHatt',{useNewUrlParser:true, useUnifiedTopology: true,'useCreateIndex':true});
-// const users=[
-//     {id: 1, name:'John'},
-//     {id: 2, name:'Johny'},
-//     {id: 3, name:'Tony'},
-//     {id: 4, name:'Rocky'},
-// ]
+
+app.use(express.static('src/uploads'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded(
     { extended:false }

@@ -64,6 +64,7 @@ export default{
     },
     update(req,res){
         const id = req.params.id
+        req.body.url=req.file.filename
         Vehicle.findByIdAndUpdate({_id:id},{$set:req.body},{new: true}).then(
             employee =>{
                 if(!employee){
