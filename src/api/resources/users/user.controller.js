@@ -45,8 +45,13 @@ export default{
     },
     update(req,res, next){
         const id = req.params.id
-        console.log(req.file)
-        req.body.url=req.file.filename
+        try {
+            req.body.url=req.file.filename
+            
+        } catch (error) {
+            console.log("lol")
+        }
+       
         User.findByIdAndUpdate({_id:id},{$set:req.body},{new: true}).then(
             employee =>{
                 if(!employee){
