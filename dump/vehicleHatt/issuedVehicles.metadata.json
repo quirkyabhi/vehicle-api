@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"vehicleHatt.issuedVehicles"}],"uuid":"18f6f9fdac09471d8dd4ec4b0f9b4a0b"}
